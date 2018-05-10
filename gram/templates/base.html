@@ -14,14 +14,23 @@
     h1{
         font-family: fantasy;
         text-align: center;
+        font-size: 50px;
+
+    }
+
+    .container{
+        background-color: blue;
+        padding: 200px; 
+        text-align: center;
+        border-radius: 15px;
     }
 </style>
 <!--End of styling-->
-<body>
      {% include "navbar.html" %} {% block content %}
-    <h1>Here Comes The Gram</h1>
-
-
+<body>
+    <div class="container">
+        <h1>Here Comes The Gram</h1>
+    </div>
 </body>
      {%endblock%} {% block scripts %}
 <!--Scripts-->
