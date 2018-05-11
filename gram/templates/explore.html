@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<!--Start of styling-->
+<style>
+    .well{
+        margin-top: 100px;
+        background-color:white;
+        margin-left:400px;
+        margin-right:400px;
+        opacity:0.9;
+        padding-top: -10px;
+    }
+
+    h3{
+        padding-left:20px;
+        padding-right: 20px;
+        
+    }
+</style>
+<!--end of styling-->
+<body>
+     {%extends 'base.html'%} {% block content %} {{block.super}}
+    
+    <body>
+        <div class="well">
+            <h3 style="margin-top: -10px; font-size: 15px;" >
+                <img style="width:60px;height:60px;border-radius:118px;" src="../static/images/sexiboys (1).JPG"> itsramza
+            </h3>
+            <hr style="background-color: black;">
+            <img class="img-responsive" src="../static/images/sexiboys.JPG">
+        </div>
+        </div>
+    </body>
+    {% endblock %}
+</body>
+</html>

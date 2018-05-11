@@ -1,38 +1,28 @@
 {% load bootstrap3 %} {% load static%}
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FlipGram</title>
-     {% block styles %} {% bootstrap_css %} {% endblock %}
+    <meta charset="utf-8"> {% if title %}
+    <title> {{title}}</title>
+    {% else %}
+    <title> FlipGram</title>
+    {% endif %} {% block styles %} {% bootstrap_css %}
+    {% endblock %}
+
 </head>
-
-<!--Styling-->
+<!--style-->
 <style>
-    h1{
-        font-family: fantasy;
-        text-align: center;
-        font-size: 50px;
-
+    body{
+        background-color: whitesmoke;
     }
 
-    .container{
-        background-color: blue;
-        padding: 200px; 
-        text-align: center;
-        border-radius: 15px;
-    }
 </style>
-<!--End of styling-->
-     {% include "navbar.html" %} {% block content %}
-<body>
-    <div class="container">
-        <h1>Here Comes The Gram</h1>
-    </div>
+<!--end of style-->
+    
+{% include "navbar.html" %} {% block content %} {% endblock %} {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> {% bootstrap_javascript %} {% endblock %}
+
 </body>
-     {%endblock%} {% block scripts %}
-<!--Scripts-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> {% bootstrap_javascript %} {% endblock %}
+
 </html>
