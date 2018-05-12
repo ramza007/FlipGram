@@ -17,3 +17,9 @@ def explore(request):
     Views the initial profile
     '''
     return render(request, 'explore.html')
+
+def timeline(request):
+    '''
+    returns timeline html
+    '''
+    return render(request, 'timeline.html')
