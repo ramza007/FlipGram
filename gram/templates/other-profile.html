@@ -1,0 +1,76 @@
+{% extends 'base.html' %} {% load static %}
+
+
+<!-- Styles block -->
+{% block styles %} {{block.super}}
+<link rel="stylesheet" href="{% static 'css/profile.css'%}"> {% endblock %}
+
+<!-- Content block -->
+{% block content %} {{block.super}}
+
+<div class="container">
+    <div class="row ">
+        <div class=" prof-sect col-md-4 col-lg-4">
+
+            {% for detail in info %} {% if check_if_following == 0 %}
+
+            <h1>
+                {{detail.user.username}}
+                <a href=" {% url 'follow' detail.id%}">
+                    <button type="button" name="button" class="btn btn-primary btn-md  pull-right  ">Follow </button>
+                </a>
+            </h1>
+            <img src="{{pic.image.url}}" alt="{{Image.image_name}}" class="img-responsive img-thumbnail postImage" width="80%"
+                height="60%x" style="padding:5px;"> {% else %}
+            <h1 class="createPost">
+                {{detail.user.username}}
+                <a href=" {% url 'unfollow' detail.id%}">
+                    <button type="button" name="button" class="btn btn-primary btn-md pull-right">Unfollow </button>
+                </a>
+            </h1>
+            {% endif %}
+
+
+            <hr>
+            <img src="{{detail.profile_photo.url}}" alt="{{request.user.username}}" class="img-responsive" id="circular-image">
+            <hr>
+            <p>{{detail.bio}}</p>
+
+
+
+            {% endfor %}
+
+            <!-- end user details -->
+
+        </div>
+
+
+
+
+        <!-- Current User's Posts  -->
+
+
+        <div class=" well col-md-6 col-md-offset-1" style="padding:5px; border:2px;">
+
+            {% for pic in pics %}
+            <div class="col-md-6">
+                <p class="well " style="color:rgb(21, 181, 171)"> Photos Posted: {{nbr}} </p>
+                <a href="{% url 'singleImage' pic.id %}">
+                    <img src="{{pic.image.url}}" alt="{{Image.image_name}}" class="img-responsive img-thumbnail postImage" width="80%" height="60%x"
+                        style="padding:5px;">
+                </a>
+            </div>
+            {% endfor %}
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}
