@@ -1,7 +1,6 @@
  {% extends 'base.html' %} {% load static%}
 <!-- Styles block -->
-{% block styles %} {{block.super}}
-<link rel="stylesheet" href="{% static 'css/index.css'%}"> {% endblock %} {% block content %}
+{% block styles %} {{block.super}}{% endblock %} {% block content %}
 
 <div class="row col-md-6 col-md-offset-3">
     {% if users%}
@@ -9,7 +8,7 @@
         <span style="color:rgb(28, 154, 135)">{{message}}</span>
     </h2>
     {% else %}
-    <h2> Oops!! {{message}} is not a Grammer yet</h2>
+    <h2> Oops!! {{message}} is not on FlipGram yet</h2>
     {% endif %}
 
 </div>

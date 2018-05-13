@@ -34,6 +34,9 @@
                                     <a href="{% url 'profileView' %}">Profile</a>
                                 </li>
                                 <li>
+                                    <a href="/update/profile/">Update Profile</a>
+                                </li>
+                                <li>
                                     <a href="/logout">Logout</a>
                                 </li>
                             </ul>
@@ -52,12 +55,12 @@
             <ul class="nav nav-tabs navbar-right" >
                 <li><a href="/timeline/"><img class="img-responsive" src="../static/images/explore.png" style="width: 25px; height: 25px; margin: 5px; margin-bottom: 8px; margin-top: 2px;"></a></li>
                 <li><a href="/profile/"><img class="img-responsive" src="../static/images/person.png" style="width: 25px; height: 25px; margin: 5px; margin-top: 2px;"></a></li>
-                <li><a><img class="img-responsive" src="../static/images/heart.png" style="width: 30px; height: 30px; margin: 5px; margin-top: 2px;"></a></li>
+                <li><a href="/index/"><img class="img-responsive" src="../static/images/heart.png" style="width: 30px; height: 30px; margin: 5px; margin-top: 2px;"></a></li>
             </ul>
             
             <!-- search form  -->
             <div style="text-align: center; margin-top: -0.10%; margin-left: 15%">
-            <form class="navbar-form" role="search" action="/">
+            <form class="navbar-form" role="search" action="{% url 'search_results' %}">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search" name="grammer" style="border-radius: 5px; text-align: center">
                 </div>

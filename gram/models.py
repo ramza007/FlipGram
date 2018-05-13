@@ -24,7 +24,6 @@ class Profile(models.Model):
         '''
         Fucntion that gets all the profiles in the app
         Return
-            profiles : list of all Profile obejcts in the database
         '''
         profiles = Profile.objects.all()
 
@@ -56,6 +55,9 @@ class Image(models.Model):
     def delete_image(self):
         ''' Method to delete an image from the database'''
         self.delete()
+
+    def __str__(self):
+        return self.image_name
 
     @classmethod
     def get_images(cls):
