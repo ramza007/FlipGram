@@ -118,7 +118,7 @@ def profile(request):
 
     except:
 
-        title = f'{current_user.username}\'s'
+        title = f'{current_user.username}'
 
         pics = Image.objects.filter(user=request.user.id).all()
 
