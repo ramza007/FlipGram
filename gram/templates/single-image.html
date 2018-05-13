@@ -13,7 +13,7 @@
 
             <img src="{{user_info.profile_photo.url}}" alt="" style="height:40px;width:40px; border-radius:50%">
             <a href="{% url 'otherProfile' image.user.id %}">
-                <p style="display:inline; margin-left:10px; color:rgb(13, 100, 171); font-weight:bolder; font-size:12px; margin-bottom:10px">{{image.user}}</p>
+                <p style="display:inline; margin-left:10px; color:rgb(13, 100, 171); font-weight:bolder; font-size:12px;">{{image.user}}</p>
                 <br>
                 <br>
             </a>
@@ -24,7 +24,7 @@
                 <img src="{{image.image.url}}" style="height:70%; width:100%; margin-left:0px" class="img-responsive">
                 <br>
             </div>
-            <p style="display:inline; margin-left:10px; margin-top:10px; font-size:16px; margin-bottom:10px">{{image.image_caption}}</p>
+            <p style="display:inline; margin-left:10px; font-size:16px;">{{image.image_caption}}</p>
             <p style="font-size:12px; color:grey; margin-top:10px; margin-left:65% "> </p>
 
 

@@ -81,11 +81,9 @@ def manage_image(request, photo_id):
     View funtion to display a particular image with its details
     '''
     image = Image.objects.get(id=photo_id)
-    # fetch the profile of the user who posted
     user_info = Profile.objects.get(user=image.user.id)
     comments = Comment.objects.filter(post=image.id)
-    validate_vote = Like.objects.filter(
-        user=request.user, post=photo_id).count()
+    validate_vote = Like.objects.filter(user=request.user, post=photo_id).count()
     upvotes = Like.get_post_likes(image.id)
     likes = len(upvotes)
     return render(request, 'manage-image.html', {'image': image, "user_info": user_info, "comments": comments, "likes": likes, "validate_vote": validate_vote})
