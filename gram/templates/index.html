@@ -37,18 +37,18 @@
 
 <section class="col-md-5 col-sm-12">
     <center>
-        <p style=" margin-left:10px;color:rgb(4, 47, 74); padding-top:10px; margin-right:20px;font-size:25px;">THE ELITE</p>
+        <p style=" margin-left:10px;color:rgb(4, 47, 74); padding-top:10px; margin-right:20px;font-size:25px;">explore</p>
     </center>
     {%for profile in grammers %}
-    <div class=" well col-md-4" style="background-color:(199, 199, 199)">
+    <div class="col-md-4">
         {% if profile %}
-
-        <img src="{{ profile.profile_photo.url }}" class="img-responsive" style="margin-left:50%; margin-top:10px;height:40px;width:40px; border-radius:50%; ">
+        
+        <img src="{{ profile.profile_photo.url }}" class="img-responsive" style="margin-left:60%; margin-top:10px;height:40px;width:40px; border-radius:50%; ">
     </div>
     </div>
-    <div class=" well col-md-8" style="background-color:(199, 199, 199)">
+    <div class="col-md-8">
         <a href="{% url 'otherProfile' profile.id %}">
-            <p style="font-family: 'Roboto Slab', serif; padding-top:10px; margin-right:10px;font-size:25px;">{{profile.user}}</p>
+            <p style="font-family: 'Roboto Slab', serif; padding-top:10px;font-size:23px; color: gray">{{profile.user}}</p>
         </a>
 
     </div>
