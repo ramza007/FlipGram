@@ -16,14 +16,14 @@
             <hr> {% for detail in info %} {% if detail.user.id == 7 %}
             <h4>Hi, {{request.user.username}} ,please create a profile to enjoy photogram</h4>
             <img src="{{detail.profile_photo.url}}" alt="{{request.user.username}}" class="img-responsive img-thumbnail" width="60%"
-                height="40%" id="circular-image" style="border: 10px solid rgb(36, 74, 130,0); margin-bottom:20px;margin-bottom:20px;margin-left:20%;"
-                ); <hr>
+                height="40%" id="circular-image" style="border: 10px solid rgb(36, 74, 130,0); margin-bottom:20px;margin-bottom:20px;margin-left:20%; border-radius: 360px;"); 
+                <hr>
             <p class="well" style="border-color:rgb(19, 175, 167)">
                 <span style=" color:rgb(19, 175, 167)">Bio :</span> {{detail.bio}}</p>
             <a class="button" href="{%url 'createProfile' %}">Create Profile</a>
             {% else %}
             <img src="{{detail.profile_photo.url}}" alt="{{request.user.username}}" class="img-responsive img-thumbnail" width="60%"
-                height="40%" id="circular-image" style="border: 10px solid rgb(36, 74, 130,0); margin-bottom:20px;margin-bottom:20px;margin-left:20%;"
+                height="40%" id="circular-image" style="margin-bottom:20px;margin-bottom:20px;margin-left:20%; border-radius: 360px;"
                 ); <hr>
             <p class="well" style="border-color:rgb(19, 175, 167)">
                 <span style=" color:rgb(19, 175, 167)">Bio :</span> {{detail.bio}}</p>
