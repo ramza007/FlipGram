@@ -7,7 +7,7 @@
 
 ## Description
 
-A web applications tha allows users to share comment and like photos posted by users
+A web applications that allows users to share comment and like photos posted by users
 
 ## User Stories
 As a user I would like:
