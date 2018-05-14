@@ -52,9 +52,9 @@
 
         <div class=" well col-md-6 col-md-offset-1" style="padding:5px; border:2px;">
 
-            {% for pic in pics %}
             <div>
                 <p class="well" style="text-align: center;"> Photos Posted: {{nbr}} </p>
+                {% for pic in pics %}
                 <a href="{% url 'singleImage' pic.id %}">
                     <img src="{{pic.image.url}}" alt="{{Image.image_name}}" class="img-responsive img-thumbnail postImage" width="80%" height="60%x"
                         style="padding:5px;">
