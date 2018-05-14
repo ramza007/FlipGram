@@ -3,6 +3,8 @@
 {% block styles %} {{block.super}}
 <link rel="stylesheet" href="{% static 'css/index.css'%}"> {% endblock %} {% block content %}
 
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
 <div class="col-md-1">
 
 </div>
@@ -14,13 +16,14 @@
         <div class="box col-md-12">
             <div class="">
                 <a href="{% url 'singleImage' image.id %}">
-                    <img src="{{ image.image.url }}" class="img-responsive" style="height:60%; width:90%; margin-left:10px; margin-bottom:10px;margin-top:10px;">
+                    <img src="{{ image.image.url }}" class="img-responsive" style="height:60%; width:90%; margin-left:10px; margin-bottom:10px;margin-top:10px; border-radius: 5px">
                 </a>
                 <div style="margin-bottom:30px;">
-                    {{image.image_caption|upper}}
+                    {{image.image_caption}}
+                    <br><br>
                     <span style="color:rgb(35, 106, 180)">{{image.user.username}}</span>
                     <span style="color:grey ;margin-left:10px; font-size:10px;"> click image to see details</span>
-                    <br>
+                    <br><br>
                     <a href="{% url 'Comment' image.id %}">
                         <button type="button" class="btn btn-primary" name="button">Comment</button>
                     </a>
@@ -45,7 +48,7 @@
     </div>
     <div class=" well col-md-8" style="background-color:(199, 199, 199)">
         <a href="{% url 'otherProfile' profile.id %}">
-            <p style=" margin-left:10px;color:rgb(19, 175, 167); padding-top:10px; margin-right:10px;font-size:25px;">{{profile.user}}</p>
+            <p style="font-family: 'Roboto Slab', serif; padding-top:10px; margin-right:10px;font-size:25px;">{{profile.user}}</p>
         </a>
 
     </div>
