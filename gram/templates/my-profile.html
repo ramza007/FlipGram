@@ -26,9 +26,11 @@
                 height="40%" id="circular-image" style="margin-bottom:20px;margin-bottom:20px;margin-left:20%; border-radius: 360px;"
                 ); <hr>
             <p class="well" style="border-color:rgb(19, 175, 167)">
-                <span style=" color:rgb(19, 175, 167)">Bio :</span> {{detail.bio}}</p>
+                <span style=" color:rgb(19, 175, 167)">Bio :</span> {{detail.bio}} <button class="pull-right">
+                    <a class="button" href="{% url 'createProfile'  %}">Edit</a>
+                </button></p>
 
-            <a class="button" href="{% url 'createProfile'  %}">Edit</a>
+            
             {% endif %} {% endfor %}
         </div>
 
