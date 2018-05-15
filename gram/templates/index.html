@@ -1,7 +1,10 @@
  {% extends 'base.html' %} {% load static%}
 <!-- Styles block -->
 {% block styles %} {{block.super}}
-<link rel="stylesheet" href="{% static 'css/index.css'%}"> {% endblock %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/index.css'%}"> 
+<link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+
+{% endblock %} {% block content %}
 
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 
@@ -37,7 +40,8 @@
 
 <section class="col-md-5 col-sm-12">
     <center>
-        <p style=" margin-left:10px;color:rgb(4, 47, 74); padding-top:10px; margin-right:20px;font-size:25px;">explore</p>
+        <p style=" margin-left:10px;color:rgb(4, 47, 74); padding-top:10px; margin-right:20px;font-size:25px; font-family: 'Kavivanar', cursive;
+">explore</p>
     </center>
     {%for profile in grammers %}
     <div class="col-md-4">
@@ -48,7 +52,7 @@
     </div>
     <div class="col-md-8">
         <a href="{% url 'otherProfile' profile.id %}">
-            <p style="font-family: 'Roboto Slab', serif; padding-top:10px;font-size:23px; color: gray">{{profile.user}}</p>
+            <p style="font-family: 'Kavivanar', cursive; padding-top:10px;font-size:23px; color: gray">{{profile.user}}</p>
         </a>
 
     </div>
