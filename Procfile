@@ -1,1 +1,1 @@
-web: gunicorn gram.wsgi --log-file -
+web: gunicorn flipgram.wsgi --log-file -
