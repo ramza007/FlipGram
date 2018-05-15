@@ -14,7 +14,7 @@
 
 
             <hr> {% for detail in info %} {% if detail.user.id == 7 %}
-            <h4>Hi, {{request.user.username}} ,please create a profile to enjoy photogram</h4>
+            <h4>{{request.user.username}}</h4>
             <img src="{{detail.profile_photo.url}}" alt="{{request.user.username}}" class="img-responsive img-thumbnail" width="60%"
                 height="40%" id="circular-image" style="border: 10px solid rgb(36, 74, 130,0); margin-bottom:20px;margin-bottom:20px;margin-left:20%; border-radius: 360px;"); 
                 <hr>
